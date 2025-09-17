@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pendulum Simulation</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+  </head>
+  <body>
+    <div id="container">
+      <canvas id="app"></canvas>
+      <div id="right-panel">
+        <h2>Adjust Pendulum</h2>
+        <label for="rope-length">Rope Length (m):</label>
+        <input type="number" id="rope-length" value="3" step="0.1" min="1" max="10">
+
+        <label for="bob-weight">Bob Weight (kg):</label>
+        <input type="number" id="bob-weight" value="1" step="0.1" min="0.1" max="10">
+
+        <button id="apply-settings">Apply</button>
+
+        <div id="info">
+          <h3>Simulation Data</h3>
+          <p>α (rad): <span id="alpha">0</span></p>
+          <p>v (m/s): <span id="velocity">0</span></p>
+          <p>a (m/s²): <span id="acceleration">0</span></p>
+        </div>
+
+        <div id="camera-info">
+          <h3>Camera Data</h3>
+          <p>Position: <span id="camera-position">(0, 0, 0)</span></p>
+          <p>LookAt: <span id="camera-lookat">(0, 0, 0)</span></p>
+          <p>FOV: <span id="camera-fov">60</span></p>
+          <p>Aspect Ratio: <span id="camera-aspect">1.00</span></p>
+          <p>Near: <span id="camera-near">0.10</span></p>
+          <p>Far: <span id="camera-far">1000.00</span></p>
+        </div>
+      </div>
+    </div>
+    <!-- ✅ Đường dẫn phải có /src/main.js -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

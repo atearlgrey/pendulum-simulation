@@ -1,0 +1,112 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Loại bỏ thanh scroll ngang và dọc */
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradient nền */
+  background-attachment: fixed;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Canvas container */
+#canvas-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#canvas-container canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Right panel */
+#right-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 98%; /* Cập nhật chiều cao */
+  background: rgba(249, 249, 249, 0.95);
+  border-left: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px; /* Thêm margin để tạo khoảng cách */
+  border-radius: 20px; /* Thêm bo góc */
+  box-sizing: border-box;
+}
+
+#right-panel h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+#right-panel label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+}
+
+#right-panel input {
+  width: calc(100% - 12px); /* Điều chỉnh chiều rộng để không tràn */
+  padding: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#right-panel button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#right-panel button:hover {
+  background: #0056b3;
+}
+
+/* Simulation info */
+#info {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+#info h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+#info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #222;
+}
+
+/* Camera info */
+#camera-info {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+#camera-info h3 {
+  margin-bottom: 10px;
+}
+
+#camera-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
