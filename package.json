@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf dist",
     "dev": "vite",
     "build:dev": "vite build --mode development",
     "build:staging": "vite build --mode staging",
-    "build:prod": "vite build --mode production"
+    "build:prod": "vite build --mode production",
+    "publish": "npx gh-pages -d dist",
+    "deploy": "npm run clean && npm run build:prod && npm run publish"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +20,7 @@
     "three": "^0.180.0"
   },
   "devDependencies": {
+    "rimraf": "^6.0.1",
     "vite": "^7.1.5"
   }
 }
